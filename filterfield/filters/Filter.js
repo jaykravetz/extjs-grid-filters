@@ -175,7 +175,7 @@ Ext.define('FilterField.filters.Filter', {
         var column = field.ownerCt.ownerCt,
             grid = column.up('grid');
 
-        grid.getStore().removeFilter(column.dataIndex);
+        grid.getStore().removeFilter(column.filter.property || column.dataIndex);
         field.triggers.clear.el.hide();
         column.setText(column.textEl.dom.firstElementChild.innerText);
     },
@@ -197,7 +197,7 @@ Ext.define('FilterField.filters.Filter', {
         column.setText('<strong><em>' + column.text + '</em></strong>');
 
         grid.getStore().addFilter({
-            property: column.property || column.dataIndex,
+            property: column.filter.property || column.dataIndex,
             operator: field.operator || column.filter.operator || me.getDefaultOperator(column),
             value: field.getValue()
         });
