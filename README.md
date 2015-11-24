@@ -5,7 +5,7 @@ Based on the FilterBar plugin.
 
 ## Usage
 
-```javacript
+```javascript
 
 // Grid Panel
 
