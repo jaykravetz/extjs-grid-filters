@@ -9,23 +9,28 @@ Based on the FilterBar plugin.
 
 // Grid Panel
 
-require: [
-  'FilterField.filters.Filter'
-],
+Ext.define('My.grid.Panel', {
+  extend: 'Ext.grid.Panel',
+  
+  require: [
+    'FilterField.filters.Filter'
+  ],
 
-plugins: [
-  ptype: 'filterfield'
-],
+  plugins: [
+    ptype: 'filterfield'
+  ],
 
-columns: [
-  {
-    xtype: 'gridcolumn',
-    text: 'Some Column',
-    dataIndex: 'some_data_index',
-    filter: {
-      xtype: 'combobox',
-      store: ['A', List', 'Of', 'Selections']
+  columns: [
+    {
+      xtype: 'gridcolumn',
+      text: 'Some Column',
+      dataIndex: 'some_data_index',
+      filter: {
+        xtype: 'combobox',
+        store: ['A', 'List', 'Of', 'Selections']
+      }
     }
-  }
-]
+  ]
+  
+});
 ```
