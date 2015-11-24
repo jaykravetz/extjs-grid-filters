@@ -25,6 +25,7 @@ columns: [
     filter: {
       xtype: 'combobox',
       store: ['A', List', 'Of', 'Selections']
+    }
   }
 ]
 ```
