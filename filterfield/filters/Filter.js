@@ -3,7 +3,7 @@ Ext.define('FilterField.filters.Filter', {
     alias: 'plugin.filterfield',
 
     require: [
-        'FilterField.filters.Filter'
+        'FilterField.button.OperatorButton'
     ],
 
 
