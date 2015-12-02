@@ -95,6 +95,7 @@ Ext.define('FilterField.filters.Filter', {
             column.insert(0, Ext.create('Ext.container.Container', {
                 width: '100%',
                 items: [filter],
+                padding: '0 10px',
                 listeners: {
                     scope: me,
                     element: 'el',
